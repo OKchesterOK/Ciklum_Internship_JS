@@ -1,0 +1,537 @@
+@font-face {
+    font-family: Segoe;
+    src: url(font/segoe_UI.ttf);
+}
+
+@font-face {
+    font-family: Sans;
+    src: url(font/open_sans_light.ttf);
+}
+
+@font-face {
+    font-family: Myriad;
+    src: url(font/myriad.ttf);
+}
+
+* { 
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	min-width: 1080px;
+}
+
+a {
+	text-decoration: none;
+	color: #2F2F2F;
+}
+
+header {
+	background-color: #FFFFFF;
+	color: #2F2F2F;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 0;
+	font-family: Segoe;
+}
+
+header a, header span {
+	font-size: 15px;
+}
+
+nav, nav li, .microsoft-logo, .right-side-menu, .right-side-menu div {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+nav {
+	width: 40%;
+}
+
+.microsoft-logo {
+	width: 19%;
+
+}
+
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+ul.header-menu > li {
+    float: left;
+    position: relative;
+}
+
+ul.header-menu > li > a {
+    display: block;
+    color: #2F2F2F;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0 1.5em;
+}
+
+ul.header-menu > li > a:hover {
+    background-color: #E6E6E6;
+}
+ul.header-submenu {
+    display: none;
+    position: absolute;
+    width: 238px;
+    top: 50px;
+    left: 0;
+    background-color: #F2F2F2;
+    border-left: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    z-index: 100;
+}
+ul.header-submenu > li {
+    display: block;
+}
+ul.header-submenu > li > a {
+    display: block;
+    padding: 1px 24px;
+    color: #2F2F2F;
+    background-color: transparent;
+    text-decoration: none;
+}
+ul.header-submenu > li > a:hover {
+    text-decoration: underline;
+}
+
+ul.header-menu > li:hover > ul.header-submenu {
+    display: block;
+}
+
+ul.last-submenu > li > a:hover {
+    background-color: #D9D9D9;
+}
+
+ul.last-submenu {
+    display: none;
+    position: absolute;
+    width: 238px;
+    height: auto;
+    top: 0;
+    left: 236px;
+    background-color: #E5E5E5;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    z-index: 100;
+    box-sizing: content-box;
+}
+ul.last-submenu > li {
+    display: block;
+}
+ul.last-submenu > li > a {
+    display: block;
+    padding: 1px 24px;
+    color: #000000;
+    background-color: transparent;
+    text-decoration: none;
+}
+ul.last-submenu > li > a:hover {
+    text-decoration: underline;
+}
+
+ul.header-submenu > li:hover > ul.last-submenu {
+    display: block;
+}
+
+.header-menu img {
+	width: 10px;
+	padding-top: 20px;
+}
+
+.header-submenu img {
+	float: right;
+}
+
+.right-side-menu {
+	text-align: right;
+	width: 40%;
+}
+
+.right-side-menu div, .right-side-menu input {
+	padding: 0 2%;
+}
+
+.right-side-menu a, .right-side-menu span {
+	font-size: 12px;
+}
+
+.right-side-menu div:nth-child(2) {
+	margin-left: 5%;
+}
+
+.right-side-menu div:last-child {
+	margin-right: 10%;
+}
+
+.microsoft-logo img {
+	max-width: 50%;
+	margin-left: 45%;
+}
+
+nav li:hover, .right-side-menu div:hover {
+	background-color: #E6E6E6;
+}
+
+input:focus {
+	 outline: none;
+}
+
+.right-side-menu input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	height: 75%;
+	width: 50%;
+	padding: 5px 25px 5px 8px;
+    border: 1px solid #D8D8D8;
+    background: url("img/search-icon.png") no-repeat 95% 50%;
+    background-size: 6%;
+    vertical-align: middle;
+}
+
+input[type="search"]::-webkit-input-placeholder {color:#000000; font-family: Segoe;}
+input[type="search"]::-moz-placeholder          {color:#000000; font-family: Segoe;}
+input[type="search"]:-moz-placeholder           {color:#000000; font-family: Segoe;}
+input[type="search"]:-ms-input-placeholder      {color:#000000; font-family: Segoe;}
+input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+.right-side-menu img {
+	height: 35%;
+	vertical-align: middle;
+}
+
+.cklm-banner {
+	height: 100%;
+	max-height: 720px;
+	background-color: #F7F7F7;
+	font-family: "Open Sans";
+	color: #47525D;
+	position: relative;
+	overflow: hidden;
+}
+
+.dropbox-background {
+	background-image: url("img/dropbox-background.jpg");
+	background-repeat: no-repeat;
+	width: 1770px;
+	height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -885px;
+    background-position: right center;
+    background-size: contain;
+}
+
+.dropbox-information {
+	position: absolute;
+	top: 20%;
+	left: 13%;
+	width: 450px;
+
+}
+
+.dropbox-information h1 {
+	font-size: 47.25px;
+	line-height: 1.3;
+    font-weight: 100;
+    margin-bottom: 25px;
+}
+
+.dropbox-information h2 {
+	max-width: 440px;
+	font-size: 21px;
+	line-height: 1.5;
+	font-weight: 100;
+	margin-bottom: 45px;
+}
+
+.dropbox-button {
+	max-width: 250px;
+	font-size: 21px;
+	line-height: 21px;
+	padding: 19px 26px;
+	text-align: center;
+    background-color: #0071E0;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.dropbox-button:hover {
+	background-color: #54B1E3;
+}
+
+.dropbox-button a {
+	color: #FFFFFF;
+}
+
+.dropbox-purchase {
+    font-size: 16px;
+}
+
+.dropbox-information span a {
+	color: #0071E0;
+	text-decoration: underline;
+}
+
+.dropbox-information span a:hover {
+	color: #54B1E3;
+}
+
+.cklm-subscription {
+	height: 70%;
+	max-height: 500px;
+	background-color: #323A45;
+	font-family: "Open Sans";
+	text-align: center;
+}
+
+.invisionapp-content h1 {
+	color: #FFFFFF;
+	font-weight: normal;
+	margin-top: 3%;
+}
+
+.invisionapp-content {
+	padding: 5% 0;
+}
+
+.invisionapp-form input {
+	width: 280px;
+    height: 63px;
+    padding-left: 48px;
+	font-size: 18px;
+	border: none;
+	margin-right: 10px;
+	border-radius: 3px;
+	vertical-align: middle;
+}
+
+.form-name {
+	background: url("img/user-icon.png") no-repeat 5% 50% #FFFFFF;
+	background-size: 10%;
+}
+
+.form-email {
+	background: url("img/email-icon.png") no-repeat 5% 50% #FFFFFF;
+	background-size: 10%;
+}
+
+.form-password {
+	background: url("img/lock-icon.png") no-repeat 5% 50% #FFFFFF;
+	background-size: 10%;
+}
+
+input[type="form"]:focus::-webkit-input-placeholder {opacity: 0.5;}
+input[type="form"]:focus::-moz-placeholder          {opacity: 0.5;}
+input[type="form"]:focus:-moz-placeholder           {opacity: 0.5;}
+input[type="form"]:focus:-ms-input-placeholder      {opacity: 0.5;}
+
+.invisionapp-button {
+	display: inline-block;
+	width: 280px;
+    height: 63px;
+	line-height: 63px;
+	width: 23%;
+	font-size: 18px;
+	margin: 0.3%;
+	border-radius: 5px;
+	background-color: #FF3366;
+	vertical-align: middle;
+	font-size: 15px;
+	font-family: sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.invisionapp-button:hover {
+	background-color: #FF0040;
+}
+
+.invisionapp-button a {
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.invisionapp-terms {
+	color: #747C83;
+	font-size: 12px;
+	margin-top: 2%;
+}
+
+.invisionapp-terms a {
+	color: #747C83;
+	text-decoration: underline;
+}
+
+.invisionapp-terms a:hover {
+	color: #FFFFFF;
+}
+
+.cklm-special-offer {
+	height: 250px;
+	font-size: 0;
+}
+
+.cklm-special-offer li {
+	display: inline-block;
+	height: 300px;
+	width: 33.333%;
+	background-repeat: no-repeat;
+	font-family: Sans;
+	text-align: center;
+	vertical-align: middle;
+	overflow: hidden;
+	position: relative;
+	background-size: 100% 100%;
+	-webkit-transition: linear 0.3s;
+    -moz-transition: linear 0.3s;
+    -o-transition: linear 0.3s;
+    transition: linear 0.3s;
+}
+
+.hover-element {
+	content: "";
+	height: 250px;
+	width: 100%;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.eve {
+	background: url(https://scontent.oculuscdn.com/t64.5771-25/11162714_283652092025521_547216123_n.jpg/eve-valkyrie.jpg) center center;
+}
+
+.luckys {
+	background: url(https://scontent.oculuscdn.com/t64.5771-25/12504834_1610504179262797_1233001088_n.jpg/luckys-tale.jpg) center center;
+}
+
+.touch {
+	background: url(https://scontent.oculuscdn.com/t64.5771-25/12504833_1567818890181507_64856256_n.jpg/touch.jpg) center center;
+}
+
+.hover-element:hover {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.cklm-special-offer li:hover {
+	background-color: rgba(0, 0, 0, 0);
+	background-size: 110% 110%;
+}
+
+.offer-content {
+	margin-top: 100px;
+}
+
+.offer-content h4 {
+	color: #A4A5A6;
+	font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.offer-content h3 {
+	color: #FFFFFF;
+	font-size: 22px;
+}
+
+footer li {
+	list-style-type: none;
+}
+
+footer {
+	height: auto;
+	padding-top: 2%;
+	position: relative;
+	bottom: 0;
+	font-family: Myriad;
+	background-color: #F2F2F2;
+	color: #666666;
+}
+
+footer a {
+	color: #666666;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+
+.down-menu, .down-panel {
+	max-width: 980px;
+	margin: 0 auto;
+	font-size: 12px;
+    line-height: 1.66667;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+.down-menu span {
+	color: #000000;
+}
+
+.column {
+	display: inline-block;
+	width: 19%;
+	vertical-align: top;
+}
+
+.last-column {
+	padding-top: 20px;
+}
+
+.contact-information {
+	padding: 15px 0 5px 0;
+	color: #999999;
+	border-bottom: 1px solid #E3E3E3;
+}
+
+.contact-information a {
+	color: #0088CC;
+}
+
+.copyright {
+	padding: 10px 0 30px 0;
+	color: #999999;
+}
+
+.copyright div {
+	display: inline-block;
+}
+
+.copyright a {
+	color: #999999;
+	padding: 0 15px;
+	border-right: 1px solid #E3E3E3
+}
+
+.contry a {
+	border: none;
+	padding: 0;
+}
+
+.contry {
+	float: right;
+}
+
