@@ -59,63 +59,40 @@ nav {
 	width: 19%;
 
 }
+ul, li {
+	padding: 0;
+	margin: 0;
+}
 
-ul {
-    display: block;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-ul:after {
-    display: block;
-    content: ' ';
-    clear: both;
-    float: none;
-}
 ul.header-menu > li {
-    float: left;
-    position: relative;
-}
-
-ul.header-menu > li > a {
-    display: block;
-    color: #2F2F2F;
-    background-color: transparent;
-    text-decoration: none;
-    padding: 0 1.5em;
+	background-color: transparent;
+	width: 100px;
+	text-align: center;
+	position: relative;
 }
 
 ul.header-menu > li > a:hover {
     background-color: #E6E6E6;
 }
-ul.header-submenu {
-    display: none;
-    position: absolute;
-    width: 238px;
-    top: 50px;
-    left: 0;
+
+ul.dropdown-submenu {
+	position: absolute;
+	display: block;
+	width: 238px;
     background-color: #F2F2F2;
     border-left: 1px solid rgba(0,0,0,0.05);
     border-bottom: 1px solid rgba(0,0,0,0.3);
     border-right: 1px solid rgba(0,0,0,0.1);
     z-index: 100;
 }
-ul.header-submenu > li {
-    display: block;
-}
-ul.header-submenu > li > a {
-    display: block;
-    padding: 1px 24px;
-    color: #2F2F2F;
-    background-color: transparent;
-    text-decoration: none;
-}
-ul.header-submenu > li > a:hover {
-    text-decoration: underline;
+
+ul.dropdown-submenu > li {
+	display: block;
+	text-align: left;
 }
 
-ul.header-menu > li:hover > ul.header-submenu {
-    display: block;
+ul.dropdown-submenu > li > a {
+	margin: 0 1.5em;
 }
 
 ul.last-submenu > li > a:hover {
@@ -140,7 +117,7 @@ ul.last-submenu > li {
 }
 ul.last-submenu > li > a {
     display: block;
-    padding: 1px 24px;
+    padding: 0 20px;
     color: #000000;
     background-color: transparent;
     text-decoration: none;
@@ -149,8 +126,13 @@ ul.last-submenu > li > a:hover {
     text-decoration: underline;
 }
 
-ul.header-submenu > li:hover > ul.last-submenu {
+ul.dropdown-submenu > li:hover > ul.last-submenu {
     display: block;
+    cursor: pointer;
+}
+
+ul.hidden {
+	display: none;
 }
 
 .header-menu img {
@@ -158,15 +140,18 @@ ul.header-submenu > li:hover > ul.last-submenu {
 	padding-top: 20px;
 }
 
-.header-submenu img {
+.dropdown-submenu img {
 	float: right;
+	margin-right: 1.5em;
 }
 
 .right-side-menu {
 	text-align: right;
 	width: 40%;
 }
-
+.right-side-menu div {
+	width: 65px;
+}
 .right-side-menu div, .right-side-menu input {
 	padding: 0 2%;
 }
@@ -174,14 +159,14 @@ ul.header-submenu > li:hover > ul.last-submenu {
 .right-side-menu a, .right-side-menu span {
 	font-size: 12px;
 }
-
+/*
 .right-side-menu div:nth-child(3) {
 	margin-left: 5%;
-}
+}*/
 
-.right-side-menu div:last-child {
+/*.right-side-menu div:last-child {
 	margin-right: 10%;
-}
+}*/
 
 .microsoft-logo img {
 	max-width: 50%;
@@ -542,6 +527,10 @@ footer a:hover {
 .contry {
 	float: right;
 }
+
+.visible-tb-mob {
+	display: none;
+}
 @media (max-width: 1920px) {
 	.invisionapp-form input {
 		width: 280px;
@@ -575,6 +564,62 @@ footer a:hover {
 	html, body {
 		min-width: 700px;
 	}
+	header {
+		position: relative;
+	}
+	nav {
+		width: 280px;
+	}
+	ul.header-menu > li {
+		text-align: left;
+	}
+	.dropdown-menu, .support {
+		padding-left: 20px;
+	}
+	ul.dropdown-submenu {
+		position: relative;
+		width: 279px;
+		left: 0;
+		background-color: #E5E5E5;
+	}
+	ul.dropdown-submenu > li:hover {
+		background-color: #D9D9D9;
+	}
+	ul.dropdown-submenu > li:hover > ul.last-submenu {
+		pointer-events: none;
+	}
+	.last-submenu.hidden {
+		display: none;
+	}
+	ul.last-submenu {
+    	position: relative;
+    	display: block;
+    	width: 278px;
+    	top: 0;
+    	left: 0;
+    	z-index: 200;
+    }
+	ul.last-submenu > li > a {
+		background-color: #D9D9D9;
+		text-decoration: none;
+	}
+	ul.last-submenu > li > a:hover {
+		background-color: #ccc;
+		text-decoration: none;
+	}
+	.left-side-menu.visible-tb-mob {
+		display: inline-block;
+	}
+	.dropdown-submenu img {
+		float: none;
+		position: relative;
+    	left: 10px;
+    	top: 10px;
+		-moz-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg); 
+		-o-transform: rotate(90deg);
+    	transform: rotate(90deg);
+	}
 	.microsoft-logo {
 		width: 35%;
 	}
@@ -583,12 +628,30 @@ footer a:hover {
 	}
 	.left-side-menu {
 		display: none;
+		position: absolute;
+		right: 0;
+	}
+	.left-side-menu > ul > li, 
+	.left-side-menu > ul {
+		width: 100%;
+		display: block;
+		top: 50px;
+		z-index: 100;
+	}
+	.dropdown-submenu > ul > li {
+		display: block;
+	}
+	.left-side-menu > ul > li {
+		background-color: #F2F2F2;
+	}
+	.left-side-menu > ul > li:hover {
+		background-color: #E6E6E6;
 	}
 	.right-side-menu input{
 		display: none;
 	}
 	.right-side-menu {
-		width: 230px;
+		width: 300px;
 		position: absolute;
 	    right: 0;
 	    height: 50px;
@@ -693,6 +756,16 @@ footer a:hover {
 	html, body {
 		min-width: 450px;
 	}
+	nav, ul.dropdown-submenu, ul.last-submenu {
+   		width: 100%;
+	}
+
+	.column-list {
+		display: block;
+	}
+	.column-list.footer-hidden{
+		display: none;
+	}
 	.microsoft-logo {
 		width: 45%;
 	}
@@ -706,7 +779,7 @@ footer a:hover {
 		display: none;
 	}
 	.right-side-menu {
-		width: 125px;
+		width: 150px;
 		position: absolute;
 	    right: 0;
 	    height: 50px;
@@ -753,7 +826,7 @@ footer a:hover {
 	}
 	.cklm-subscription {
 		height: 100%;
-		max-height: 550px;
+		max-height: 600px;
 	}
 	.invisionapp-content {
 		padding: 30px;
@@ -788,8 +861,26 @@ footer a:hover {
 	footer {
 		padding-left: 20px;
 	}
-	.down-menu {
-		display: none;
+	.column {
+		display: block;
+		width: 100%;
+	}
+	.column-header {
+		font-size: 14px;
+    	line-height: 2.78571;
+    	font-weight: 400;
+    	letter-spacing: normal;
+    	border-bottom: 1px solid #E3E3E3;
+		cursor: pointer;
+	}
+	.column-header:after {
+		content: '+';
+		float: right;
+		font-weight: normal;
+		margin-right: 8px;
+	}
+	.last-column {
+		padding: 0;
 	}
 	.contact-information {
     	padding-bottom: 25px;
