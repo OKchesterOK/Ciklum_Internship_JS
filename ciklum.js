@@ -36,7 +36,7 @@ $('body, .last-submenu').on('click', function () {
 //footer menu 480px
 
 $(".column-header").on('click', function () {
-	$('ul.column-list').addClass("footer-hidden");
+    $('ul.column-list').addClass("footer-hidden");
     $(this).next().removeClass("footer-hidden");
     return false;
 });

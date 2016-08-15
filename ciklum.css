@@ -159,14 +159,6 @@ ul.hidden {
 .right-side-menu a, .right-side-menu span {
 	font-size: 12px;
 }
-/*
-.right-side-menu div:nth-child(3) {
-	margin-left: 5%;
-}*/
-
-/*.right-side-menu div:last-child {
-	margin-right: 10%;
-}*/
 
 .microsoft-logo img {
 	max-width: 50%;
@@ -202,7 +194,7 @@ input[type="search"]:-ms-input-placeholder      {color:#000000; font-family: Seg
 input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
 
 .right-side-menu img {
-	height: 35%;
+	height: 20px;
 	vertical-align: middle;
 }
 
@@ -335,10 +327,10 @@ div.hide-search-icon, div.hide-menu {
 	background-size: 10%;
 }
 
-input[type="form"]:focus::-webkit-input-placeholder {opacity: 0.5;}
-input[type="form"]:focus::-moz-placeholder          {opacity: 0.5;}
-input[type="form"]:focus:-moz-placeholder           {opacity: 0.5;}
-input[type="form"]:focus:-ms-input-placeholder      {opacity: 0.5;}
+input[type="text"]:focus::-webkit-input-placeholder {opacity: 0.5;}
+input[type="text"]:focus::-moz-placeholder          {opacity: 0.5;}
+input[type="text"]:focus:-moz-placeholder           {opacity: 0.5;}
+input[type="text"]:focus:-ms-input-placeholder      {opacity: 0.5;}
 
 .invisionapp-button {
 	display: inline-block;
@@ -657,7 +649,7 @@ footer a:hover {
 	    height: 50px;
 	}
 	.right-side-menu div{
-		padding: 0 3%;
+		width: 50px;
 	}
 	.right-side-menu div:last-child {
     	margin-right: 5%;
@@ -677,10 +669,10 @@ footer a:hover {
 		top: 15%;
 	}
 	.dropbox-information h1 {
-		font-size: 26;
+		font-size: 26px;
 	}
 	.dropbox-information h2 {
-		font-size: 16;
+		font-size: 16px;
 		max-width: 330px;
 		margin-bottom: 25px;
 	}
@@ -784,8 +776,8 @@ footer a:hover {
 	    right: 0;
 	    height: 50px;
 	}
-	.right-side-menu div{
-		padding: 0 5%;
+	.right-side-menu div {
+		width: 40px;
 	}
 	div.hide-search-icon, div.hide-menu {
 		display: inline-block;
@@ -802,10 +794,10 @@ footer a:hover {
 		top: 20%;
 	}
 	.dropbox-information h1 {
-		font-size: 26;
+		font-size: 26px;
 	}
 	.dropbox-information h2 {
-		font-size: 16;
+		font-size: 16px;
 		margin-bottom: 25px;
 	}
 	.dropbox-button, .dropbox-purchase {
